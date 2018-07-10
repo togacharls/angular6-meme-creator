@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  imgSrc = 'https://sdtimes.com/wp-content/uploads/2018/04/angular.png';
+  aboveText = 'Above Text';
+  belowText = 'Below Text';
 }

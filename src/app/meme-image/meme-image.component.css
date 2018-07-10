@@ -1,0 +1,23 @@
+.meme-container{
+  position: relative;
+  text-align: center;
+}
+img{
+  width: 100%;
+}
+h1{
+  position: absolute;
+  font-weight: bold;
+  color: #ffffff;
+  z-index: 2;
+  width: 100%;
+  font-size: 3em;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+}
+
+h1.above-text{
+  top: 1em;
+}
+h1.below-text{
+  bottom: 1em;
+}
