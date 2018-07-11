@@ -1,3 +1,5 @@
-<p>
-  meme-form works!
-</p>
+<div class="meme-form-container">
+  <input [(ngModel)]="imgSrc" [placeholder]="placeholders.imgSrc" (change)="onChangeImgSrc()">
+  <input [(ngModel)]="aboveText" [placeholder]="placeholders.above" (change)="onChangeAboveText()">
+  <input [(ngModel)]="belowText" [placeholder]="placeholders.below" (change)="onChangeBelowText()">
+</div>

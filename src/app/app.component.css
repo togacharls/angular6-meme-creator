@@ -6,7 +6,8 @@
   color: #2c3e50;
   margin-top: 60px;
 }
-app-meme-image{
+app-meme-image,
+app-meme-form{
   display: block;
   margin-top: 5%;
   margin-left: 33%;
