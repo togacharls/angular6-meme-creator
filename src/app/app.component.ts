@@ -13,6 +13,7 @@ export class AppComponent {
     this.loadData();
   }
   loadData () {
+    this.memeService.loadData();
     this.meme = this.memeService.getData();
   }
 }
