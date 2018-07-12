@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MemeService } from './meme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  imgSrc = 'https://sdtimes.com/wp-content/uploads/2018/04/angular.png';
-  aboveText = 'Above Text';
-  belowText = 'Below Text';
+  meme: any;
+  constructor (private memeService: MemeService) {
+    this.loadData();
+  }
+  loadData () {
+    this.meme = this.memeService.getData();
+  }
 }
