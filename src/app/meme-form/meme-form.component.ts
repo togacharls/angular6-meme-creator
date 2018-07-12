@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Meme } from '../meme.model';
 
 const MemeInputPlaceholders = {
   imgSrc: 'Img src...',
@@ -13,19 +14,9 @@ const MemeInputPlaceholders = {
 })
 export class MemeFormComponent {
   placeholders = MemeInputPlaceholders;
-  @Input() imgSrc: String;
-  @Output() imgSrcChange = new EventEmitter<String>();
-  @Input() aboveText: String;
-  @Output() aboveTextChange = new EventEmitter<String>();
-  @Input() belowText: String;
-  @Output() belowTextChange = new EventEmitter<String>();
-  onChangeImgSrc () {
-    this.imgSrcChange.emit(this.imgSrc);
-  }
-  onChangeAboveText () {
-    this.aboveTextChange.emit(this.aboveText);
-  }
-  onChangeBelowText () {
-    this.belowTextChange.emit(this.belowText);
+  @Input() meme: Meme;
+  @Output() memeChange = new EventEmitter<Meme>();
+  onChangeMeme () {
+    this.memeChange.emit(this.meme);
   }
 }

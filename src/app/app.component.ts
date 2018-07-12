@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MemeService } from './meme.service';
+import { Meme } from './meme.model';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,12 @@ import { MemeService } from './meme.service';
 })
 export class AppComponent {
   title = 'app';
-  meme: any;
+  meme: Meme;
   constructor (private memeService: MemeService) {
     this.loadData();
   }
   loadData () {
     this.memeService.loadData();
-    this.meme = this.memeService.getData();
+    this.meme = this.memeService.meme;
   }
 }
