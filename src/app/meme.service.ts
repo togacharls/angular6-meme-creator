@@ -4,6 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MemeService {
-
-  constructor() { }
+  public getData () {
+    return {
+      imgSrc: 'https://sdtimes.com/wp-content/uploads/2018/04/angular.png',
+      aboveText: 'Above Text',
+      belowText: 'Below Text'
+    };
+  }
 }
